@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dom Moustache | Barbearia & Estilo</title>
 
+    <!-- Importação local do Bootstrap (npm) -->
     <link
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <!-- CSS Próprio -->
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body class="bg-dark text-light">
+    <!-- HEADER & NAVBAR SEMÂNTICA -->
     <header class="sticky-top bg-black border-bottom border-secondary">
       <nav class="navbar navbar-expand-lg navbar-dark container py-3">
         <a
@@ -20,18 +23,10 @@
         >
           ✂️ Dom Moustache
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarMenu"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarMenu"
-        >
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
           <ul class="navbar-nav gap-lg-3">
             <li class="nav-item">
               <a class="nav-link active" href="#home">Início</a>
@@ -50,7 +45,9 @@
       </nav>
     </header>
 
+    <!-- CONTEÚDO PRINCIPAL (MAIN) -->
     <main>
+      <!-- HERO SECTION -->
       <section
         id="home"
         class="py-5 text-center bg-dark text-white border-bottom border-secondary"
@@ -71,6 +68,7 @@
         </div>
       </section>
 
+      <!-- SERVIÇOS (GRID COM CARDS) -->
       <section id="servicos" class="py-5">
         <div class="container">
           <div class="text-center mb-5">
@@ -84,7 +82,7 @@
 
           <div class="row g-4">
             <div class="col-12 col-md-6 col-lg-4">
-              <div class="card h-100 bg-black text-light border-secondary">
+              <article class="card h-100 bg-black text-light border-secondary">
                 <div class="card-body p-4 text-center">
                   <span class="fs-1">✂️</span>
                   <h3 class="card-title h4 fw-bold mt-3">Corte Masculino</h3>
@@ -93,11 +91,11 @@
                   </p>
                   <span class="fs-5 fw-bold text-warning">R$ 50,00</span>
                 </div>
-              </div>
+              </article>
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-              <div class="card h-100 bg-black text-light border-secondary">
+              <article class="card h-100 bg-black text-light border-secondary">
                 <div class="card-body p-4 text-center">
                   <span class="fs-1">🪒</span>
                   <h3 class="card-title h4 fw-bold mt-3">Barba Completa</h3>
@@ -106,117 +104,26 @@
                   </p>
                   <span class="fs-5 fw-bold text-warning">R$ 40,00</span>
                 </div>
-              </div>
+              </article>
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-              <div class="card h-100 bg-black text-light border-secondary">
+              <article class="card h-100 bg-black text-light border-secondary">
                 <div class="card-body p-4 text-center">
                   <span class="fs-1">👑</span>
                   <h3 class="card-title h4 fw-bold mt-3">Combo VIP</h3>
                   <p class="card-text text-secondary">
-                    Corte + Barba + Sombrancelha + Bebida de cortesia.
+                    Corte + Barba + Sobrancelha + Bebida de cortesia.
                   </p>
                   <span class="fs-5 fw-bold text-warning">R$ 80,00</span>
                 </div>
-              </div>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        id="agendamento"
-        class="py-5 bg-black border-top border-bottom border-secondary"
-      >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-              <h2
-                class="h1 fw-bold text-center text-uppercase text-warning mb-4"
-              >
-                Agendar Horário
-              </h2>
-
-              <form id="form-agendamento" class="needs-validation">
-                <div class="mb-3">
-                  <label for="nome" class="form-label fw-bold"
-                    >Nome Completo</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control bg-dark text-light border-secondary"
-                    id="nome"
-                    required
-                    placeholder="Digite seu nome"
-                  />
-                </div>
-
-                <div class="mb-3">
-                  <label for="telefone" class="form-label fw-bold"
-                    >Telefone / WhatsApp</label
-                  >
-                  <input
-                    type="tel"
-                    class="form-control bg-dark text-light border-secondary"
-                    id="telefone"
-                    required
-                    placeholder="(11) 99999-9999"
-                  />
-                </div>
-
-                <div class="mb-3">
-                  <label for="servico" class="form-label fw-bold"
-                    >Serviço Desejado</label
-                  >
-                  <select
-                    class="form-select bg-dark text-light border-secondary"
-                    id="servico"
-                    required
-                  >
-                    <option value="" selected disabled>
-                      Selecione um serviço...
-                    </option>
-                    <option value="corte">Corte Masculino (R$ 50)</option>
-                    <option value="barba">Barba Completa (R$ 40)</option>
-                    <option value="combo">Combo VIP (R$ 80)</option>
-                  </select>
-                </div>
-
-                <div class="row g-3 mb-4">
-                  <div class="col-12 col-sm-6">
-                    <label for="data" class="form-label fw-bold">Data</label>
-                    <input
-                      type="date"
-                      class="form-control bg-dark text-light border-secondary"
-                      id="data"
-                      required
-                    />
-                  </div>
-                  <div class="col-12 col-sm-6">
-                    <label for="hora" class="form-label fw-bold">Horário</label>
-                    <input
-                      type="time"
-                      class="form-control bg-dark text-light border-secondary"
-                      id="hora"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  class="btn btn-warning w-100 fw-bold text-dark py-2"
-                >
-                  Confirmar Agendamento
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- AGENDAMENTO (COMPONENTES DE FORMULÁRIO E LISTA) -->
+      <!-- AGENDAMENTO (FORMULÁRIO E EXIBIÇÃO TEMPORÁRIA) -->
       <section
         id="agendamento"
         class="py-5 bg-black border-top border-bottom border-secondary"
@@ -275,7 +182,9 @@
                     <option value="Barba Completa (R$ 40)">
                       Barba Completa (R$ 40)
                     </option>
-                    <option value="Combo VIP (R$ 80)">Combo VIP (R$ 80)</option>
+                    <option value="Combo VIP (R$ 80)">
+                      Combo VIP (R$ 80)
+                    </option>
                   </select>
                 </div>
 
@@ -300,10 +209,7 @@
                   </div>
                 </div>
 
-                <button
-                  type="submit"
-                  class="btn btn-warning w-100 fw-bold text-dark py-2"
-                >
+                <button type="submit" class="btn btn-warning w-100 fw-bold text-dark py-2">
                   Confirmar Agendamento
                 </button>
               </form>
@@ -311,15 +217,11 @@
               <!-- ÁREA ONDE APARECEM OS AGENDAMENTOS NA TELA -->
               <div class="border-top border-secondary pt-4">
                 <h3
-                  class="h4 fw-bold text-uppercase text-warning mb-3 text-center"
-                >
+                  class="h4 fw-bold text-uppercase text-warning mb-3 text-center">
                   Horários Agendados
                 </h3>
                 <div id="lista-agendamentos" class="d-flex flex-column gap-3">
-                  <p
-                    id="mensagem-vazia"
-                    class="text-center text-secondary my-3"
-                  >
+                  <p id="mensagem-vazia" class="text-center text-secondary my-3">
                     Nenhum horário agendado no momento.
                   </p>
                 </div>
@@ -330,18 +232,20 @@
       </section>
     </main>
 
+    <!-- FOOTER SEMÂNTICO -->
     <footer
       id="contato"
       class="py-4 text-center text-secondary border-top border-secondary"
     >
       <div class="container">
-        <p class="mb-1 fw-bold text-light">Navalha & Co. Barbearia</p>
+        <p class="mb-1 fw-bold text-light">Dom Moustache Barbearia</p>
         <p class="mb-2">Rua Central, 123 - Centro | Tel: (11) 99999-9999</p>
-        <small>&copy; 2026 Navalha & Co. Todos os direitos reservados.</small>
+        <small>&copy; 2026 Dom Moustache. Todos os direitos reservados.</small>
       </div>
     </footer>
 
+    <!-- SCRIPTS -->
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./src/js/script.js"></script>
+    <script src="./src/script/script.js"></script>
   </body>
 </html>
