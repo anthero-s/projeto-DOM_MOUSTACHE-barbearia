@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navalha & Co. | Barbearia & Estilo</title>
     
-    <!-- Importação do CSS do Bootstrap via node_modules (sem CDN) -->
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <!-- CSS Próprio -->
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body class="bg-dark text-light">
 
-    <!-- HEADER & NAVBAR SEMÂNTICA -->
     <header class="sticky-top bg-black border-bottom border-secondary">
         <nav class="navbar navbar-expand-lg navbar-dark container py-3">
             <a class="navbar-brand fw-bold text-uppercase tracking-wide fs-4" href="#">
@@ -32,9 +29,7 @@
         </nav>
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL (MAIN) -->
     <main>
-        <!-- HERO SECTION -->
         <section id="home" class="py-5 text-center bg-dark text-white border-bottom border-secondary">
             <div class="container py-5">
                 <h1 class="display-3 fw-bold text-uppercase mb-3">Estilo & Tradição</h1>
@@ -45,7 +40,6 @@
             </div>
         </section>
 
-        <!-- SERVIÇOS (GRID COM CARDS) -->
         <section id="servicos" class="py-5">
             <div class="container">
                 <div class="text-center mb-5">
@@ -54,7 +48,6 @@
                 </div>
                 
                 <div class="row g-4">
-                    <!-- Card 1 -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card h-100 bg-black text-light border-secondary">
                             <div class="card-body p-4 text-center">
@@ -66,7 +59,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 2 -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card h-100 bg-black text-light border-secondary">
                             <div class="card-body p-4 text-center">
@@ -78,7 +70,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 3 -->
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card h-100 bg-black text-light border-secondary">
                             <div class="card-body p-4 text-center">
@@ -93,7 +84,6 @@
             </div>
         </section>
 
-        <!-- AGENDAMENTO (FORMULÁRIO BOOTSTRAP) -->
         <section id="agendamento" class="py-5 bg-black border-top border-bottom border-secondary">
             <div class="container">
                 <div class="row justify-content-center">
@@ -140,7 +130,6 @@
         </section>
     </main>
 
-    <!-- FOOTER SEMÂNTICO -->
     <footer id="contato" class="py-4 text-center text-secondary border-top border-secondary">
         <div class="container">
             <p class="mb-1 fw-bold text-light">Navalha & Co. Barbearia</p>
@@ -149,7 +138,6 @@
         </div>
     </footer>
 
-    <!-- JS do Bootstrap via node_modules e JS Próprio -->
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./src/js/script.js"></script>
 </body>
