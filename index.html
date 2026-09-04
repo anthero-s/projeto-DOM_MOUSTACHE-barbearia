@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Moustache | Barbearia & Estilo</title>
+    
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body class="bg-dark text-light">
+
+    <header class="sticky-top bg-black border-bottom border-secondary">
+        <nav class="navbar navbar-expand-lg navbar-dark container py-3">
+            <a class="navbar-brand fw-bold text-uppercase tracking-wide fs-4" href="#">
+                ✂️ Dom Moustache
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+                <ul class="navbar-nav gap-lg-3">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#agendamento">Agendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="py-5 text-center bg-dark text-white border-bottom border-secondary">
+            <div class="container py-5">
+                <h1 class="display-3 fw-bold text-uppercase mb-3">Estilo & Tradição</h1>
+                <p class="lead text-secondary mb-4 col-lg-8 mx-auto">
+                    Muito mais que um corte. Uma experiência completa de cuidado masculino com profissionais qualificados.
+                </p>
+                <a href="#agendamento" class="btn btn-warning btn-lg fw-bold text-dark px-4 py-2">Agende Seu Horário</a>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="h1 fw-bold text-uppercase text-warning">Nossos Serviços</h2>
+                    <p class="text-secondary">Confira nossos principais cuidados e escolha o seu</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 bg-black text-light border-secondary">
+                            <div class="card-body p-4 text-center">
+                                <span class="fs-1">✂️</span>
+                                <h3 class="card-title h4 fw-bold mt-3">Corte Masculino</h3>
+                                <p class="card-text text-secondary">Corte moderno ou clássico adaptado ao seu formato de rosto.</p>
+                                <span class="fs-5 fw-bold text-warning">R$ 50,00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 bg-black text-light border-secondary">
+                            <div class="card-body p-4 text-center">
+                                <span class="fs-1">🪒</span>
+                                <h3 class="card-title h4 fw-bold mt-3">Barba Completa</h3>
+                                <p class="card-text text-secondary">Modelagem com toalha quente, óleo hidratante e alinhamento.</p>
+                                <span class="fs-5 fw-bold text-warning">R$ 40,00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 bg-black text-light border-secondary">
+                            <div class="card-body p-4 text-center">
+                                <span class="fs-1">👑</span>
+                                <h3 class="card-title h4 fw-bold mt-3">Combo VIP</h3>
+                                <p class="card-text text-secondary">Corte + Barba + Sombrancelha + Bebida de cortesia.</p>
+                                <span class="fs-5 fw-bold text-warning">R$ 80,00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="agendamento" class="py-5 bg-black border-top border-bottom border-secondary">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <h2 class="h1 fw-bold text-center text-uppercase text-warning mb-4">Agendar Horário</h2>
+                        
+                        <form id="form-agendamento" class="needs-validation">
+                            <div class="mb-3">
+                                <label for="nome" class="form-label fw-bold">Nome Completo</label>
+                                <input type="text" class="form-control bg-dark text-light border-secondary" id="nome" required placeholder="Digite seu nome">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label fw-bold">Telefone / WhatsApp</label>
+                                <input type="tel" class="form-control bg-dark text-light border-secondary" id="telefone" required placeholder="(11) 99999-9999">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="servico" class="form-label fw-bold">Serviço Desejado</label>
+                                <select class="form-select bg-dark text-light border-secondary" id="servico" required>
+                                    <option value="" selected disabled>Selecione um serviço...</option>
+                                    <option value="corte">Corte Masculino (R$ 50)</option>
+                                    <option value="barba">Barba Completa (R$ 40)</option>
+                                    <option value="combo">Combo VIP (R$ 80)</option>
+                                </select>
+                            </div>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-12 col-sm-6">
+                                    <label for="data" class="form-label fw-bold">Data</label>
+                                    <input type="date" class="form-control bg-dark text-light border-secondary" id="data" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="hora" class="form-label fw-bold">Horário</label>
+                                    <input type="time" class="form-control bg-dark text-light border-secondary" id="hora" required>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-warning w-100 fw-bold text-dark py-2">Confirmar Agendamento</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato" class="py-4 text-center text-secondary border-top border-secondary">
+        <div class="container">
+            <p class="mb-1 fw-bold text-light">Navalha & Co. Barbearia</p>
+            <p class="mb-2">Rua Central, 123 - Centro | Tel: (11) 99999-9999</p>
+            <small>&copy; 2026 Navalha & Co. Todos os direitos reservados.</small>
+        </div>
+    </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
